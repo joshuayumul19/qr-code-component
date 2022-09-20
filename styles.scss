@@ -1,0 +1,102 @@
+$white :hsl(0, 0%, 100%);
+$gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+$font : 'Outfit';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $gray;
+}
+
+.qr-code-container {
+    background-color: white;
+    width: 20%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+}
+
+img {
+    padding: 5%;
+    border-radius: 10%;
+}
+
+.description {
+    font-family: $font;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 5% 10% 5%;
+    text-align: center;
+
+    &>h1 {
+        font-size: 1.5rem;
+        color: $dark-blue;
+    }
+
+    &>p {
+        color: $grayish-blue;
+        margin: 5% auto 0 auto;
+        width: 95%;
+    }
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .qr-code-container {
+        width: 30%;
+    }
+
+    .description {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:992px) {
+    .qr-code-container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+    .qr-code-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width:500px) {
+    .qr-code-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .qr-code-container {
+        width: 95%;
+    }
+
+    .description {
+        padding: 0 2% 10% 2%;
+        width: 90%;
+        text-align: center;
+
+        &>h1 {
+            font-size: 1.5rem;
+        }
+
+        &>p {
+            margin: 5% auto 0 auto;
+            width: 90%;
+        }
+    }
+}
